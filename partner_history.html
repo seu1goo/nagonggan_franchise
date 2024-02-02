@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 프랜차이즈</title>
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linear Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./js/library/jquery/jquery-ui.min.css" />
+    <script src="./js/library/jquery/jquery-ui.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./js/library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- moment -->
+    <script src="./js/library/moment/moment.min.js"></script>
+
+    <!-- adminlte -->
+    <link rel="stylesheet" href="./js/library/adminlte/adminlte.css" />
+    <script src="./js/library/adminlte/adminlte.js"></script>
+
+    <!-- select2 -->
+    <link rel="stylesheet" href="./js/library/select2/select2.css" />
+    <script src="./js/library/select2/select2.full.min.js"></script>
+
+    <!-- input -->
+    <script src="./js/library/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="./js/library/inputmask/jquery.inputmask.min.js"></script>
+
+    <!-- duallistbox -->
+    <link
+      rel="stylesheet"
+      href="./js/library/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <script src="./js/library/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reactive.css" />
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div id="container" class="history_form write">
+      <!-- contents -->
+      <div id="contents">
+        <h2>시공일지 입력</h2>
+
+        <!-- form_detail -->
+        <section class="form_detail">
+          <ul>
+            <li>
+              <h5>시공일</h5>
+              <div class="form_area date_start">
+                <input
+                  type="date"
+                  autocomplete="off"
+                  placeholder="시작일을 입력하세요."
+                  title="시작일"
+                  value=""
+                  id="his_date"
+                  class="datepicker-input frm_his form-control form-valid fv-empty"
+                />
+              </div>
+            </li>
+            <li>
+              <h5>시공범위</h5>
+              <input
+                type="text"
+                class="form-control frm_his form-valid fv-empty"
+                id="his_title"
+                title="일지 제목"
+                placeholder="시공 위치 및 대상을 입력해주세요."
+                value=""
+              />
+            </li>
+            <li>
+              <h5>시공내용</h5>
+              <textarea
+                maxlength="300"
+                placeholder="작업내역을 입력해주세요. (300자 내외)"
+                id="his_memo"
+                title="시공 내역"
+                class="text_count textarea_count_limit form-control frm_his form-valid fv-empty"
+              ></textarea>
+              <p class="count textarea_count_screen">0 / 300</p>
+            </li>
+            <li>
+              <h5>시공사진</h5>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  title="이미지"
+                  accept="image/*"
+                  multiple
+                  id="his_img"
+                  id="his_img"
+                  class="custom-file-input form-control <?=($mode=='add') ? 'frm_his form-valid fv-empty' : ''?>"
+                />
+                <label class="custom-file-label" for="his_img"
+                  >파일을 선택하세요.</label
+                >
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- // form_detail -->
+
+        <!-- btn_area -->
+        <div class="btn_area">
+          <button
+            type="button"
+            data-mode=""
+            data-comp-idx=""
+            data-fran-idx=""
+            data-his-idx=""
+            class="btn btn_fs his-submit"
+          >
+            저장
+          </button>
+          <button type="button" class="btn btn_gy btn-cancel">취소</button>
+        </div>
+        <!-- // btn_area -->
+      </div>
+      <!-- // contents -->
+    </div>
+    <!-- // container -->
+
+    <!-- modal -->
+    <div id="modal-alert" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-alert-title" class="modal-title"></h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div id="modal-alert-content" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="modal-alert-agree"
+              class="btn btn_sb"
+              onclick="modal_hide()"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+  </body>
+</html>

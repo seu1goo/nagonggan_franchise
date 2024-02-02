@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 프랜차이즈</title>
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linear Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./js/library/jquery/jquery-ui.min.css" />
+    <script src="./js/library/jquery/jquery-ui.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./js/library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- moment -->
+    <script src="./js/library/moment/moment.min.js"></script>
+
+    <!-- adminlte -->
+    <link rel="stylesheet" href="./js/library/adminlte/adminlte.css" />
+    <script src="./js/library/adminlte/adminlte.js"></script>
+
+    <!-- select2 -->
+    <link rel="stylesheet" href="./js/library/select2/select2.css" />
+    <script src="./js/library/select2/select2.full.min.js"></script>
+
+    <!-- input -->
+    <script src="./js/library/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="./js/library/inputmask/jquery.inputmask.min.js"></script>
+
+    <!-- duallistbox -->
+    <link
+      rel="stylesheet"
+      href="./js/library/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <script src="./js/library/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reactive.css" />
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div id="container" class="admin_contract">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <div class="logo">
+            <a href="./index.html">
+              <h1>본점</h1>
+            </a>
+          </div>
+          <ul class="btn_area">
+            <li>
+              <a
+                href="./account_company.html"
+                class="btn btn_fs btn_join_confirm"
+                >본사 승인요청 <span>2</span>건</a
+              >
+            </li>
+            <li>
+              <a
+                href="./account_partner.html"
+                class="btn btn_sb btn_join_confirm"
+                >시공사 승인요청 <span>2</span> 건</a
+              >
+            </li>
+            <li>
+              <button id="btn_logout" class="btn btn_gy_dark">로그아웃</button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- // header -->
+
+      <!-- contents -->
+      <div id="contents">
+        <!-- shortcut -->
+        <section class="shortcut">
+          <div class="inner">
+            <ul class="btn_area">
+              <li>
+                <a href="./admin.html" class="btn btn_gy_light">시공현황</a>
+              </li>
+              <li>
+                <a href="./admin_bidding.html" class="btn btn_gy_light"
+                  >시공비딩</a
+                >
+              </li>
+              <li>
+                <a href="./admin_contract.html" class="btn btn_fs">시공계약</a>
+              </li>
+              <li>
+                <a href="./admin_company.html" class="btn btn_gy_light"
+                  >본점 법인</a
+                >
+              </li>
+              <li>
+                <a href="./admin_partner.html" class="btn btn_gy_light"
+                  >시공사</a
+                >
+              </li>
+            </ul>
+            <ul class="select_area">
+              <li>
+                <select
+                  name="go_franchisee"
+                  id="go_franchisee"
+                  onchange="if(this.value) location.href=(this.value);"
+                >
+                  <option value="">본점 바로가기</option>
+                  <option value="./company.html">본점</option>
+                </select>
+              </li>
+              <li>
+                <select
+                  name="go_partner"
+                  id="go_partner"
+                  onchange="if(this.value) location.href=(this.value);"
+                >
+                  <option value="">시공사 바로가기</option>
+                  <option value="./partner.html">시공사</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // shortcut -->
+
+        <!-- state -->
+        <section class="state">
+          <div class="inner">
+            <ul>
+              <li>
+                <h4>누적 계약건</h4>
+                <span>0</span>
+              </li>
+              <li>
+                <h4>저번달 계약건</h4>
+                <span>0</span>
+              </li>
+              <li>
+                <h4>이번달 계약건</h4>
+                <span>0</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // state -->
+
+        <!-- list -->
+        <section class="list">
+          <div class="inner">
+            <div class="list_table">
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>03</p>
+                </li>
+                <li>
+                  <h4>브랜드</h4>
+                  <p>브랜드</p>
+                </li>
+                <li>
+                  <h4>지점</h4>
+                  <p>가나다점</p>
+                </li>
+                <li class="full">
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>점주</h4>
+                  <p>가나다</p>
+                </li>
+                <li>
+                  <h4>점주연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>미래디자인</p>
+                </li>
+                <li>
+                  <h4>시공사연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시작일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>종료일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>면적</h4>
+                  <p>40평</p>
+                </li>
+                <li>
+                  <h4>계약금액</h4>
+                  <p>&#8361;100,000,000</p>
+                </li>
+                <li class="table_docs full">
+                  <h4>서류</h4>
+                  <p></p>
+                </li>
+                <li>
+                  <h4>상태</h4>
+                  <p class="inactive">비딩전</p>
+                </li>
+                <li>
+                  <h4>계약정보</h4>
+                  <p>
+                    <button
+                      data-fran-idx=""
+                      data-comp-idx=""
+                      class="btn btn_gy show_contract_form"
+                    >
+                      등록
+                    </button>
+                  </p>
+                </li>
+              </ul>
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>02</p>
+                </li>
+                <li>
+                  <h4>브랜드</h4>
+                  <p>브랜드</p>
+                </li>
+                <li>
+                  <h4>지점</h4>
+                  <p>가나다점</p>
+                </li>
+                <li class="full">
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>점주</h4>
+                  <p>가나다</p>
+                </li>
+                <li>
+                  <h4>점주연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>미래디자인</p>
+                </li>
+                <li>
+                  <h4>시공사연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시작일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>종료일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>면적</h4>
+                  <p>40평</p>
+                </li>
+                <li>
+                  <h4>계약금액</h4>
+                  <p>&#8361;100,000,000</p>
+                </li>
+                <li class="table_docs full">
+                  <h4>서류</h4>
+                  <p>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_estimate"
+                    >
+                      견적서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_contract"
+                    >
+                      계약서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="3"
+                      class="btn btn_line show_docs_franchise show_docs_plan"
+                    >
+                      도면
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="4"
+                      class="btn btn_line show_docs_franchise show_docs_table"
+                    >
+                      공정표
+                    </button>
+                  </p>
+                </li>
+                <li>
+                  <h4>상태</h4>
+                  <p class="negative">진행중</p>
+                </li>
+                <li>
+                  <h4>계약정보</h4>
+                  <p></p>
+                </li>
+              </ul>
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>01</p>
+                </li>
+                <li>
+                  <h4>브랜드</h4>
+                  <p>브랜드</p>
+                </li>
+                <li>
+                  <h4>지점</h4>
+                  <p>가나다점</p>
+                </li>
+                <li class="full">
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>점주</h4>
+                  <p>가나다</p>
+                </li>
+                <li>
+                  <h4>점주연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>미래디자인</p>
+                </li>
+                <li>
+                  <h4>시공사연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시작일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>종료일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>면적</h4>
+                  <p>40평</p>
+                </li>
+                <li>
+                  <h4>계약금액</h4>
+                  <p>&#8361;100,000,000</p>
+                </li>
+                <li class="table_docs full">
+                  <h4>서류</h4>
+                  <p>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_estimate"
+                    >
+                      견적서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_contract"
+                    >
+                      계약서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="3"
+                      class="btn btn_line show_docs_franchise show_docs_plan"
+                    >
+                      도면
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="4"
+                      class="btn btn_line show_docs_franchise show_docs_table"
+                    >
+                      공정표
+                    </button>
+                  </p>
+                </li>
+                <li>
+                  <h4>상태</h4>
+                  <p class="informative">완료</p>
+                </li>
+                <li>
+                  <h4>계약정보</h4>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- // list -->
+
+        <!-- pagination -->
+        <div class="pg_wrap">
+          <div class="dataTables_length" id="dataTable_length">
+            <select class="custom-select form-control" id="tableRows">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="1000">1000</option>
+            </select>
+          </div>
+        </div>
+        <!-- // pagination -->
+      </div>
+      <!-- // contents -->
+    </div>
+    <!-- // container -->
+
+    <!-- modal -->
+    <div id="modal-alert" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-alert-title" class="modal-title"></h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div id="modal-alert-content" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="modal-alert-agree"
+              class="btn btn_sb"
+              onclick="modal_hide()"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_estimate fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">견적서</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_estimate.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_plan fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">도면</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_plan.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_table fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">공정표</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_table.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_contract fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">계약서</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_contract.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-contract" class="modal modal_contract_form fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-contract-title" class="modal-title">정보추가</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div id="modal-contract-content" class="modal-body">
+            <table>
+              <colgroup>
+                <col width="30%" />
+                <col width="" />
+              </colgroup>
+              <tr>
+                <th>시작일</th>
+                <td>
+                  <div class="modal_form">
+                    <input
+                      type="date"
+                      class="form-control form-valid fv-empty frm_cont datepicker-input"
+                      id="fran_sdate"
+                      title="시작일"
+                      value=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>종료일</th>
+                <td>
+                  <div class="modal_form">
+                    <input
+                      type="date"
+                      class="form-control form-valid fv-empty frm_cont datepicker-input"
+                      id="fran_edate"
+                      title="종료일"
+                      value=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>면적</th>
+                <td>
+                  <div class="modal_form">
+                    <input
+                      type="text"
+                      class="form-control form-valid fv-empty frm_cont numeric_add_comma"
+                      id="fran_size"
+                      title="면적"
+                      min="0"
+                      placeholder="면적을 숫자로 입력하세요."
+                    />
+                    <p>평</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>계약금액</th>
+                <td>
+                  <div class="modal_form">
+                    <input
+                      type="text"
+                      class="form-control form-valid fv-empty frm_cont numeric_add_comma"
+                      id="fran_price"
+                      title="계약금액"
+                      min="0"
+                      placeholder="금액을 숫자로 입력하세요."
+                    />
+                    <p>원</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>견적서</th>
+                <td>
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input form-control form-valid fv-empty frm_cont"
+                      id="fran_estimate"
+                      title="견적서"
+                      accept="image/*"
+                    />
+                    <label class="custom-file-label" for="fran_estimate"
+                      >파일을 선택하세요.</label
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>계약서</th>
+                <td>
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input form-control form-valid fv-empty frm_cont"
+                      id="fran_contract"
+                      title="계약서"
+                      accept="image/*"
+                    />
+                    <label class="custom-file-label" for="fran_contract"
+                      >파일을 선택하세요.</label
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>도면</th>
+                <td>
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input form-control form-valid fv-empty frm_cont"
+                      id="fran_floorplan"
+                      title="도면"
+                      accept="image/*"
+                    />
+                    <label class="custom-file-label" for="fran_floorplan"
+                      >파일을 선택하세요.</label
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>공정표</th>
+                <td>
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input form-control form-valid fv-empty frm_cont"
+                      id="fran_worksheet"
+                      title="공정표"
+                      accept="image/*"
+                    />
+                    <label class="custom-file-label" for="fran_worksheet"
+                      >파일을 선택하세요.</label
+                    >
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_fs add_contract_form">
+              확인
+            </button>
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+  </body>
+</html>

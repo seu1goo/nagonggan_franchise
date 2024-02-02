@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 프랜차이즈</title>
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linear Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./js/library/jquery/jquery-ui.min.css" />
+    <script src="./js/library/jquery/jquery-ui.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./js/library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- moment -->
+    <script src="./js/library/moment/moment.min.js"></script>
+
+    <!-- adminlte -->
+    <link rel="stylesheet" href="./js/library/adminlte/adminlte.css" />
+    <script src="./js/library/adminlte/adminlte.js"></script>
+
+    <!-- select2 -->
+    <link rel="stylesheet" href="./js/library/select2/select2.css" />
+    <script src="./js/library/select2/select2.full.min.js"></script>
+
+    <!-- input -->
+    <script src="./js/library/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="./js/library/inputmask/jquery.inputmask.min.js"></script>
+
+    <!-- duallistbox -->
+    <link
+      rel="stylesheet"
+      href="./js/library/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <script src="./js/library/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reactive.css" />
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div id="container" class="franchise_partner">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <div class="logo">
+            <a href="./index.html">
+              <h1>시공사</h1>
+            </a>
+          </div>
+          <ul class="btn_area">
+            <li>
+              <select id="franListSelectBran">
+                <option value="">전체</option>
+                <option value="브랜드1">브랜드1</option>
+                <option value="브랜드2">브랜드2</option>
+              </select>
+            </li>
+            <li>
+              <a href="./partner_inquiry.html" class="btn btn_fs">문의(1)</a>
+            </li>
+            <li>
+              <a href="./join_partner.html" class="btn btn_gy_light"
+                >정보수정</a
+              >
+            </li>
+            <li>
+              <button id="btn_logout" class="btn btn_gy_dark">로그아웃</button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- // header -->
+
+      <!-- contents -->
+      <div id="contents">
+        <!-- list -->
+        <section class="list">
+          <div class="inner">
+            <div class="list_table">
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>02</p>
+                </li>
+                <li>
+                  <h4>브랜드</h4>
+                  <p>브랜드</p>
+                </li>
+                <li>
+                  <h4>지점</h4>
+                  <p>가나다점</p>
+                </li>
+                <li class="full">
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>점주</h4>
+                  <p>가나다</p>
+                </li>
+                <li>
+                  <h4>점주연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시작일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>종료일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li class="full">
+                  <h4>면적</h4>
+                  <p>40평</p>
+                </li>
+                <li class="table_docs full">
+                  <h4>서류</h4>
+                  <p>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_estimate"
+                    >
+                      견적서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="3"
+                      class="btn btn_line show_docs_franchise show_docs_plan"
+                    >
+                      도면
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="4"
+                      class="btn btn_line show_docs_franchise show_docs_table"
+                    >
+                      공정표
+                    </button>
+                  </p>
+                </li>
+                <li class="full">
+                  <h4>관리</h4>
+                  <p>
+                    <a href="./partner_history.html" class="btn btn_sb"
+                      >시공일지</a
+                    >
+                  </p>
+                </li>
+              </ul>
+              <div class="list_img swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="list_img_title">
+                      <h4>시공 완료</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior01.png"
+                        class="show_eval_gallery"
+                        data-comp-idx=""
+                        data-fran-idx=""
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-09</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior02.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-08</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior03.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-07</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior04.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-06</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior05.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="list_table">
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>01</p>
+                </li>
+                <li>
+                  <h4>브랜드</h4>
+                  <p>브랜드</p>
+                </li>
+                <li>
+                  <h4>지점</h4>
+                  <p>가나다점</p>
+                </li>
+                <li class="full">
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>점주</h4>
+                  <p>가나다</p>
+                </li>
+                <li>
+                  <h4>점주연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>시작일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li>
+                  <h4>종료일</h4>
+                  <p>2022-12-24</p>
+                </li>
+                <li class="full">
+                  <h4>면적</h4>
+                  <p>40평</p>
+                </li>
+                <li class="table_docs full">
+                  <h4>서류</h4>
+                  <p>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="1"
+                      class="btn btn_line show_docs_franchise show_docs_estimate"
+                    >
+                      견적서
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="3"
+                      class="btn btn_line show_docs_franchise show_docs_plan"
+                    >
+                      도면
+                    </button>
+                    <button
+                      data-par-idx=""
+                      data-imgtype="4"
+                      class="btn btn_line show_docs_franchise show_docs_table"
+                    >
+                      공정표
+                    </button>
+                  </p>
+                </li>
+                <li class="full">
+                  <h4>관리</h4>
+                  <p>
+                    <a href="./partner_history.html" class="btn btn_sb"
+                      >시공일지</a
+                    >
+                  </p>
+                </li>
+              </ul>
+              <div class="list_img swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="list_img_title">
+                      <h4>시공 완료</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior01.png"
+                        class="show_eval_gallery"
+                        data-comp-idx=""
+                        data-fran-idx=""
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-09</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior02.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-08</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior03.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-07</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior04.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                  <li
+                    data-his-date=""
+                    data-comp-idx=""
+                    data-fran-idx=""
+                    data-his-idx=""
+                    data-memo=""
+                    class="swiper-slide show_history_gallery"
+                  >
+                    <div class="list_img_title">
+                      <h4>2023-01-06</h4>
+                    </div>
+                    <figure>
+                      <img
+                        src="./img/img_interior05.png"
+                        alt=""
+                        onerror="this.src='./img/img_base.jpg'"
+                      />
+                    </figure>
+                    <h3>집기 셋팅</h3>
+                    <p>테이블 / 의자 셋팅</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- // list -->
+
+        <!-- pagination -->
+        <div class="pg_wrap">
+          <div class="dataTables_length" id="dataTable_length">
+            <select class="custom-select form-control" id="tableRows">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="1000">1000</option>
+            </select>
+          </div>
+        </div>
+        <!-- // pagination -->
+      </div>
+      <!-- // contents -->
+    </div>
+    <!-- // container -->
+
+    <!-- modal -->
+    <div id="modal-image" class="modal modal_estimate fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">견적서</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_estimate.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_plan fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">도면</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_plan.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_table fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">공정표</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_table.png" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_eval_gallery fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">시공완료</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_interior01.png" />
+            </div>
+            <div id="modal-image-memo" class="modal-memo">집기 셋팅</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-image" class="modal modal_history_gallery fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-image-title" class="modal-title">2023-01-09</h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-image-content">
+              <img src="./img/img_interior05.png" />
+            </div>
+            <div id="modal-image-memo" class="modal-memo">집기 셋팅</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn_gy" onclick="modal_hide()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+  </body>
+</html>

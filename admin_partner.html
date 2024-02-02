@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 프랜차이즈</title>
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linear Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./js/library/jquery/jquery-ui.min.css" />
+    <script src="./js/library/jquery/jquery-ui.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./js/library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- moment -->
+    <script src="./js/library/moment/moment.min.js"></script>
+
+    <!-- adminlte -->
+    <link rel="stylesheet" href="./js/library/adminlte/adminlte.css" />
+    <script src="./js/library/adminlte/adminlte.js"></script>
+
+    <!-- select2 -->
+    <link rel="stylesheet" href="./js/library/select2/select2.css" />
+    <script src="./js/library/select2/select2.full.min.js"></script>
+
+    <!-- input -->
+    <script src="./js/library/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="./js/library/inputmask/jquery.inputmask.min.js"></script>
+
+    <!-- duallistbox -->
+    <link
+      rel="stylesheet"
+      href="./js/library/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <script src="./js/library/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reactive.css" />
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div id="container" class="admin_partner">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <div class="logo">
+            <a href="./index.html">
+              <h1>본점</h1>
+            </a>
+          </div>
+          <ul class="btn_area">
+            <li>
+              <a
+                href="./account_company.html"
+                class="btn btn_fs btn_join_confirm"
+                >본사 승인요청 <span>2</span>건</a
+              >
+            </li>
+            <li>
+              <a
+                href="./account_partner.html"
+                class="btn btn_sb btn_join_confirm"
+                >시공사 승인요청 <span>2</span> 건</a
+              >
+            </li>
+            <li>
+              <button id="btn_logout" class="btn btn_gy_dark">로그아웃</button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- // header -->
+
+      <!-- contents -->
+      <div id="contents">
+        <!-- shortcut -->
+        <section class="shortcut">
+          <div class="inner">
+            <ul class="btn_area">
+              <li>
+                <a href="./admin.html" class="btn btn_gy_light">시공현황</a>
+              </li>
+              <li>
+                <a href="./admin_bidding.html" class="btn btn_gy_light"
+                  >시공비딩</a
+                >
+              </li>
+              <li>
+                <a href="./admin_contract.html" class="btn btn_gy_light"
+                  >시공계약</a
+                >
+              </li>
+              <li>
+                <a href="./admin_company.html" class="btn btn_gy_light"
+                  >본점 법인</a
+                >
+              </li>
+              <li>
+                <a href="./admin_partner.html" class="btn btn_fs">시공사</a>
+              </li>
+            </ul>
+            <ul class="select_area">
+              <li>
+                <select
+                  name="go_franchisee"
+                  id="go_franchisee"
+                  onchange="if(this.value) location.href=(this.value);"
+                >
+                  <option value="">본점 바로가기</option>
+                  <option value="./company.html">본점</option>
+                </select>
+              </li>
+              <li>
+                <select
+                  name="go_partner"
+                  id="go_partner"
+                  onchange="if(this.value) location.href=(this.value);"
+                >
+                  <option value="">시공사 바로가기</option>
+                  <option value="./partner.html">시공사</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // shortcut -->
+
+        <!-- state -->
+        <section class="state">
+          <div class="inner">
+            <ul>
+              <li>
+                <h4>총 등록업체</h4>
+                <span>0</span>
+              </li>
+              <li>
+                <h4>저번달 등록업체</h4>
+                <span>0</span>
+              </li>
+              <li>
+                <h4>이번달 등록업체</h4>
+                <span>0</span>
+              </li>
+              <li>
+                <h4>금일 등록업체</h4>
+                <span>0</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // state -->
+
+        <!-- filter -->
+        <section class="filter">
+          <div class="inner">
+            <ul class="filter_bottom type2">
+              <li class="filter_sorting" id="sortSorting">
+                <h5>정렬</h5>
+                <div class="filter_form">
+                  <select class="form-control">
+                    <option value="1">최근등록순</option>
+                    <option value="2">저번달계약건</option>
+                    <option value="3">이번달계약건</option>
+                    <option value="4">누적계약건</option>
+                    <option value="5">누적매출건</option>
+                  </select>
+                </div>
+              </li>
+              <li class="filter_location">
+                <h5>지역별</h5>
+                <div class="filter_form">
+                  <select class="form-control" id="sortLocation">
+                    <option value="전체">전체</option>
+                    <option value="서울/경기/인천">서울/경기/인천</option>
+                    <option value="대전/세종/충청">대전/세종/충청</option>
+                    <option value="부산/대구/경상">부산/대구/경상</option>
+                    <option value="광주/목포/전라">광주/목포/전라</option>
+                    <option value="강원/제주">강원/제주</option>
+                  </select>
+                </div>
+              </li>
+              <li class="filter_search">
+                <h5>검색</h5>
+                <div class="filter_form">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="시공사명을 입력해주세요."
+                    value=""
+                  />
+                  <button type="button" class="btn btn_gy" id="searchInit">
+                    <i class="fa fa-repeat"></i>
+                  </button>
+                  <button type="button" class="btn btn_gy_dark">검색</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // filter -->
+
+        <!-- list -->
+        <section class="list">
+          <div class="inner">
+            <div class="list_table">
+              <div class="list_title">
+                <h3>시공사 리스트</h3>
+              </div>
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>03</p>
+                </li>
+                <li>
+                  <h4>가입일</h4>
+                  <p>2022-01-19</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>시공사 이름</p>
+                </li>
+                <li>
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>누적계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>저번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>이번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>누적매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>저번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>이번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>협력업체</h4>
+                  <p>
+                    <button
+                      type="button"
+                      class="btn btn_gy_light show_record_list"
+                      data-comp-idx=""
+                    >
+                      리스트
+                    </button>
+                  </p>
+                </li>
+                <li>
+                  <h4>평균평점</h4>
+                  <p>4.0</p>
+                </li>
+                <li class="full">
+                  <h4>관리</h4>
+                  <p>
+                    <a href="./join_partner.html" class="btn btn_sb"
+                      >정보수정</a
+                    >
+                  </p>
+                </li>
+              </ul>
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>02</p>
+                </li>
+                <li>
+                  <h4>가입일</h4>
+                  <p>2022-01-19</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>시공사 이름</p>
+                </li>
+                <li>
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>누적계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>저번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>이번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>누적매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>저번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>이번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>협력업체</h4>
+                  <p>
+                    <button
+                      type="button"
+                      class="btn btn_gy_light show_record_list"
+                      data-comp-idx=""
+                    >
+                      리스트
+                    </button>
+                  </p>
+                </li>
+                <li>
+                  <h4>평균평점</h4>
+                  <p>4.0</p>
+                </li>
+                <li class="full">
+                  <h4>관리</h4>
+                  <p>
+                    <a href="./join_partner.html" class="btn btn_sb"
+                      >정보수정</a
+                    >
+                  </p>
+                </li>
+              </ul>
+              <ul class="list_detail">
+                <li class="full">
+                  <h4>No.</h4>
+                  <p>01</p>
+                </li>
+                <li>
+                  <h4>가입일</h4>
+                  <p>2022-01-19</p>
+                </li>
+                <li>
+                  <h4>시공사</h4>
+                  <p>시공사 이름</p>
+                </li>
+                <li>
+                  <h4>주소</h4>
+                  <p>인천 계양구 주부토로529번길 4 2층</p>
+                </li>
+                <li>
+                  <h4>연락처</h4>
+                  <p>010-1234-5678</p>
+                </li>
+                <li>
+                  <h4>누적계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>저번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>이번달계약건</h4>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h4>누적매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>저번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>이번달매출</h4>
+                  <p>&#8361;0</p>
+                </li>
+                <li>
+                  <h4>협력업체</h4>
+                  <p>
+                    <button
+                      type="button"
+                      class="btn btn_gy_light show_record_list"
+                      data-comp-idx=""
+                    >
+                      리스트
+                    </button>
+                  </p>
+                </li>
+                <li>
+                  <h4>평균평점</h4>
+                  <p>4.0</p>
+                </li>
+                <li class="full">
+                  <h4>관리</h4>
+                  <p>
+                    <a href="./join_partner.html" class="btn btn_sb"
+                      >정보수정</a
+                    >
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- // list -->
+
+        <!-- pagination -->
+        <div class="pg_wrap">
+          <div class="dataTables_length" id="dataTable_length">
+            <select class="custom-select form-control" id="tableRows">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="1000">1000</option>
+            </select>
+          </div>
+        </div>
+        <!-- // pagination -->
+      </div>
+      <!-- // contents -->
+    </div>
+    <!-- // container -->
+
+    <!-- modal -->
+    <div id="modal-record-list" class="modal modal_record fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-list-title" class="modal-title">협력 업체 리스트</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div id="modal-list-content" class="modal-body">
+            <table>
+              <colgroup>
+                <col width="" />
+                <col width="" />
+                <col width="" />
+                <col width="" />
+                <col width="" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>브랜드명</th>
+                  <th>누적계약건</th>
+                  <th>저번달계약건</th>
+                  <th>최종 계약일</th>
+                  <th>평균평점</th>
+                </tr>
+              </thead>
+              <tbody id="partRecordList">
+                <tr>
+                  <td>브랜드1</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>2022-12-18</td>
+                  <td>4.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 프랜차이즈</title>
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linear Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <!-- font icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./js/library/jquery/jquery-ui.min.css" />
+    <script src="./js/library/jquery/jquery-ui.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./js/library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- moment -->
+    <script src="./js/library/moment/moment.min.js"></script>
+
+    <!-- adminlte -->
+    <link rel="stylesheet" href="./js/library/adminlte/adminlte.css" />
+    <script src="./js/library/adminlte/adminlte.js"></script>
+
+    <!-- select2 -->
+    <link rel="stylesheet" href="./js/library/select2/select2.css" />
+    <script src="./js/library/select2/select2.full.min.js"></script>
+
+    <!-- input -->
+    <script src="./js/library/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="./js/library/inputmask/jquery.inputmask.min.js"></script>
+
+    <!-- duallistbox -->
+    <link
+      rel="stylesheet"
+      href="./js/library/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <script src="./js/library/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reactive.css" />
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- container -->
+    <div id="container" class="company_form join write">
+      <!-- contents -->
+      <div id="contents">
+        <h2>프랜차이즈 법인 회원가입</h2>
+
+        <!-- join_form -->
+        <section class="join_form">
+          <ul>
+            <li>
+              <label for="comp_acc_id">아이디</label>
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty fv-idrule"
+                title="아이디"
+                placeholder="아이디 (영문 또는 숫자 조합 5~12자리)"
+                id="comp_acc_id"
+                autocomplete="off"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_acc_pw">비밀번호</label>
+              <input
+                type="password"
+                class="form-control frm_comp"
+                title="비밀번호"
+                placeholder="비밀번호를 입력해 주세요."
+                id="comp_acc_pw"
+                autocomplete="off"
+                value=""
+              />
+              <input
+                type="password"
+                class="form-control frm_comp"
+                title="비밀번호 확인"
+                placeholder="비밀번호를 확인해 주세요."
+                id="comp_acc_pw_conf"
+                autocomplete="off"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_name">법인명</label>
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty"
+                title="법인명"
+                placeholder="법인명을 입력해 주세요."
+                id="comp_name"
+                value=""
+              />
+            </li>
+            <li class="brand_name">
+              <label>브랜드명</label>
+              <div id="brand_list">
+                <div class="brand_add brand_list_arr">
+                  <input
+                    type="text"
+                    class="form-control frm_comp form-valid fv-empty brand_list_mod"
+                    title="브랜드명"
+                    placeholder="브랜드명을 입력해 주세요."
+                    data-bran-idx=""
+                    value=""
+                  />
+                  <button type="button" class="btn_add btn_brand_del">
+                    <i class="fa-solid fa-square-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="brand_add brand_plus">
+                <button type="button" class="btn_brand_plus" id="btn_brand_add">
+                  브랜드 추가
+                </button>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <label for="comp_owner_name">대표자명</label>
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty"
+                title="대표자명"
+                placeholder="대표자명를 입력해 주세요."
+                id="comp_owner_name"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_addr_more">소재지</label>
+              <input
+                type="hidden"
+                id="comp_addr_sido"
+                readonly="readonly"
+                value=""
+              />
+              <input
+                type="hidden"
+                id="comp_postcode"
+                readonly="readonly"
+                value=""
+              />
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty"
+                title="주소지"
+                placeholder="주소지를 검색해 주세요."
+                id="comp_address"
+                readonly="readonly"
+                value=""
+              />
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty"
+                title="상세주소"
+                placeholder="상세주소를 입력해 주세요."
+                id="comp_addr_more"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_tel">연락처</label>
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty data_mask"
+                data-inputmask='"mask": "999-9999-9999"'
+                title="연락처"
+                placeholder="연락처를 입력해 주세요."
+                id="comp_tel"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_open_date">사업자개업일</label>
+              <input
+                type="date"
+                class="form-control frm_comp form-valid fv-empty datepicker-input"
+                title="사업자개업일"
+                placeholder="사업자개업일을 입력해 주세요."
+                id="comp_open_date"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_bn">사업자번호</label>
+              <input
+                type="text"
+                class="form-control frm_comp form-valid fv-empty data_mask"
+                title="사업자번호"
+                data-inputmask='"mask": "999-99-99999"'
+                placeholder="사업자번호를 입력해 주세요."
+                id="comp_bn"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="comp_license">사업자등록증</label>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  id="comp_license"
+                  class="custom-file-input"
+                  title="사업자등록증"
+                  placeholder="사업자등록증"
+                  accept="image/*"
+                />
+                <label class="custom-file-label" for="comp_license"
+                  >파일을 선택하세요.</label
+                >
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- // join_form -->
+
+        <!-- btn_area -->
+        <div class="btn_area">
+          <button
+            type="button"
+            class="btn btn_fs comp-submit"
+            data-mode=""
+            data-comp-idx=""
+          >
+            확인
+          </button>
+          <button type="button" class="btn btn_gy btn-cancel">취소</button>
+        </div>
+        <!-- // btn_area -->
+      </div>
+      <!-- // contents -->
+    </div>
+    <!-- // container -->
+
+    <!-- modal -->
+    <div id="modal-alert" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 id="modal-alert-title" class="modal-title"></h4>
+            <button
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+              class="close"
+            >
+              <img aria-hidden="true" src="./img/ico_close.png" alt="닫기" />
+            </button>
+          </div>
+          <div id="modal-alert-content" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="modal-alert-agree"
+              class="btn btn_sb"
+              onclick="modal_hide()"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+  </body>
+</html>
